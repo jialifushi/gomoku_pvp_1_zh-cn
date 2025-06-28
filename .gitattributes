@@ -1,0 +1,12 @@
+# node模块文件
+/node_modules
+
+# 日志文件
+/日志
+/log*
+/*.log*
+
+# 常见编译文件
+/dist
+/build
+/out
