@@ -11,7 +11,7 @@ let assetFolder = path.join(__dirname, '..', 'client','public')
 //---  socket.io is listening for queues triggered by ----//
 //---  players, then emits information to both     ----//
 io.on('connection', function(socket){
-  console.log('a user connected')
+  console.log('用户已连接')
   socket.on('player move', gameData => {
     io.emit('player move', gameData)
   })
@@ -42,4 +42,4 @@ app.get('/*', function(req, res){
 // Start server
 let port = process.env.PORT || 4000
 http.listen(port)
-console.log("Listening on localhost:" + port)
+console.log("正在监听本地主机（localhost）上的端口：" + port)

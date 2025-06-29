@@ -21,9 +21,9 @@ export default class App extends Component {
   win(data) {
     if (data.gameID === this.state.gameID) {
       if (this.state.player === +data.player) {
-        alert('You Won')
+        alert('你赢了(刷新页面在来一局)')
       } else {
-        alert('You Lost')
+        alert('你输了(刷新页面在来一局)')
       }
     }
   }
@@ -72,7 +72,9 @@ export default class App extends Component {
         <div className="row">
           <div className="col-md-offset-2 col-md-8">
             <div className="gameBoard">
-              <div className='title' style={this.titleColor()}>Gomoku</div>
+              <div className='title' style={this.titleColor()}>联机五子棋</div>
+              <p style={{textAlign: 'center'}}>一个玩家先创建房间，另一个玩家在加入房间；加入房间的玩家先手。</p>
+              <p style={{textAlign: 'center'}}><a href="https://github.com/ChrisWiles/GomokuReact" target="_blank">原项目仓库</a> <a href="https://github.com/Firfr/gomoku_pvp_1_zh-cn" target="_blank">镜像制作仓库</a></p>
               {this.changeLobby(this.state.isLobby)}
             </div>
           </div>

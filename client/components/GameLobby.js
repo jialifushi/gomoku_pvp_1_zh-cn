@@ -26,7 +26,7 @@ class GameLobby extends Component {
   }
 
   createGame() {
-    return <h2>{`Access Code: ${this.state.code}`}</h2>
+    return <h2>{`房间号: ${this.state.code}`}</h2>
   }
 
   handleOnSubmit(event) {
@@ -39,7 +39,7 @@ class GameLobby extends Component {
     return (
       <form onSubmit={this.handleOnSubmit}>
         <div className="form-group">
-          <input type="text" value={this.state.code} placeholder='Enter Access Code' onChange={this.handleChange}/>
+          <input type="text" value={this.state.code} placeholder='输入房间号' onChange={this.handleChange}/>
         </div>
       </form>
     )
@@ -48,8 +48,8 @@ class GameLobby extends Component {
   chooseGame() {
     return (
       <div>
-        <button type="button" className="btn btn-default" onClick={this.displayState.bind(this, true, false)}>Join Game</button>
-        <button type="button" className="btn btn-default" onClick={this.displayState.bind(this, false, true)}>Create Game</button>
+        <button type="button" className="btn btn-default" onClick={this.displayState.bind(this, true, false)}>加入游戏</button>
+        <button type="button" className="btn btn-default" onClick={this.displayState.bind(this, false, true)}>创建游戏</button>
       </div>
     )
   }
